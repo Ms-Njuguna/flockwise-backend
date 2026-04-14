@@ -1,0 +1,72 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# Django stuff
+# =========================
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# Django migrations (optional — only ignore if you're resetting DB often)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# VS Code / IDEs
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Testing / coverage
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# =========================
+# Celery (if used)
+# =========================
+celerybeat-schedule
+celerybeat.pid
+
+# =========================
+# Docker (optional)
+# =========================
+docker-compose.override.yml

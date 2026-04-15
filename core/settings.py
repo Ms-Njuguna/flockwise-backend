@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'farm',  # <--- Add this line!
+    
+    # If you are using Django Rest Framework, make sure it's here too
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

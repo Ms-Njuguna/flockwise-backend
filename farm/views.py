@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from .models import Record
+from .serializers import RecordSerializer
 
-# Create your views here.
+class RecordViewSet(ModelViewSet):
+    queryset = Record.objects.all()
+    serializer_class = RecordSerializer

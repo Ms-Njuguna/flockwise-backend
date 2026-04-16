@@ -1,5 +1,12 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
+class User(AbstractUser):
+    email = models.EmailField(unique=True)
+    farmer_type = models.CharField(max_length=20, blank=True)
+    farm_size = models.CharField(max_length=20, blank=True)
+    
 # FLOCK
 class Flock(models.Model):
     TYPE_CHOICES = [

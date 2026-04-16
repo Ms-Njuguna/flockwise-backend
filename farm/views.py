@@ -56,3 +56,15 @@ def login(request):
         })
 
     return Response({"error": "Invalid credentials"}, status=400)
+
+@api_view(['POST'])
+def ai_assistant(request):
+    question = request.data.get("question")
+
+    # SIMPLE VERSION (we upgrade later)
+    if "eggs" in question.lower():
+        answer = "Ensure 14 hours of light and proper feeding for better egg production."
+    else:
+        answer = "Focus on feed quality, hygiene, and bird health."
+
+    return Response({"answer": answer})

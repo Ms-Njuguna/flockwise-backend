@@ -21,6 +21,7 @@ from farm.views import (
     EggRecordViewSet,
     BirdSaleViewSet,
     ExpenseViewSet,
+    register
 )
 
 router = DefaultRouter()
@@ -31,4 +32,5 @@ router.register("expenses", ExpenseViewSet)
 
 urlpatterns = [
     path("api/", include(router.urls)),
+    path('api/register/', register),
 ]

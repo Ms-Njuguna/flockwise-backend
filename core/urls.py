@@ -16,11 +16,19 @@ Including another URLconf
 """
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from farm.views import RecordViewSet
+from farm.views import (
+    FlockViewSet,
+    EggRecordViewSet,
+    BirdSaleViewSet,
+    ExpenseViewSet,
+)
 
 router = DefaultRouter()
-router.register('records', RecordViewSet)
+router.register("flock", FlockViewSet)
+router.register("eggs", EggRecordViewSet)
+router.register("bird-sales", BirdSaleViewSet)
+router.register("expenses", ExpenseViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path("api/", include(router.urls)),
 ]
